@@ -1,0 +1,281 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* a tags */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Rajdhani", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  background-image: url(/images/hero_image.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+header .nav {
+  display: flex;
+  justify-content: center;
+}
+header .nav .nav__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+header .nav .nav__items .nav__item {
+  margin-right: 2.375rem;
+}
+header .nav .nav__items .nav__item .nav__link {
+  font-family: inherit;
+  color: inherit;
+}
+header .nav .nav__items .nav__item .nav__link:hover {
+  text-decoration: underline;
+}
+header .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 17rem;
+}
+header .hero .hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  line-height: 0.8;
+  font-size: 2rem;
+}
+header .hero .hero__title .emphasis {
+  font-size: 4rem;
+}
+header .hero .hero__text {
+  padding: 1rem;
+}
+
+main .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf9fd;
+  color: #000;
+  border-bottom: solid 1px #000;
+}
+main .projects .alignment {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .projects .alignment h2 {
+  margin-bottom: 2rem;
+}
+main .projects .alignment .projects__item {
+  display: flex;
+  flex-direction: column;
+}
+main .projects .alignment .projects__item .projects__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .projects .alignment .projects__item .projects__text-box h3 {
+  margin-bottom: 1rem;
+}
+main .projects .alignment .projects__item .projects__text-box .projects__list {
+  text-align: start;
+  margin-bottom: 1rem;
+}
+main .projects .alignment .projects__item .projects__text-box .projects__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+main .projects .alignment .projects__item .projects__text-box .projects__links a:hover {
+  text-decoration: underline;
+}
+main .projects .alignment .projects__item .projects__image-box {
+  margin-bottom: 4rem;
+}
+main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf9fd;
+  color: #000;
+}
+main .about .alignment {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .about .alignment .image__container {
+  background-image: url(/images/about_opt.png);
+  background-position: center;
+  background-size: cover;
+  width: 16rem;
+  height: 16rem;
+}
+main .about .alignment .text__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main .about .alignment .text__container .about__title {
+  margin: 2rem;
+}
+main .about .alignment .text__container .btn-blue {
+  background-color: #1e1ba8;
+  border: 1px #1e1ba8 solid;
+  border-radius: 20rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5rem 3rem;
+  margin: 2rem;
+  transition: 400ms;
+  cursor: pointer;
+}
+main .about .alignment .text__container .btn-blue:hover {
+  background-color: #ecf9fd;
+  border: 1px #1e1ba8 solid;
+  color: #1e1ba8;
+}
+main .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #04012c;
+}
+main .contact .alignment {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .contact .alignment .contact__title {
+  margin: 1rem;
+}
+main .contact .alignment .contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .contact .alignment .contact__info .contact__text {
+  padding-bottom: 2rem;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+}
+footer .alignment {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .alignment .footer__social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+footer .alignment .footer__social-links .footer__social-image {
+  margin-right: 2.375rem;
+}
+footer .alignment .footer__social-links .footer__social-image {
+  height: 2rem;
+}
+footer .alignment p {
+  font-size: 0.75rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px #fff solid;
+  border-radius: 20rem;
+  color: inherit;
+  text-transform: uppercase;
+  padding: 0.5rem 3rem;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}/*# sourceMappingURL=styles.css.map */
