@@ -160,6 +160,9 @@ main .projects .alignment .projects__item .projects__text-box .projects__links {
   align-items: flex-start;
   margin-bottom: 2rem;
 }
+main .projects .alignment .projects__item .projects__text-box .projects__links a {
+  color: #000;
+}
 main .projects .alignment .projects__item .projects__text-box .projects__links a:hover {
   text-decoration: underline;
 }
@@ -197,19 +200,12 @@ main .about .alignment .text__container {
 main .about .alignment .text__container .about__title {
   margin: 2rem;
 }
-main .about .alignment .text__container .btn-blue {
-  background-color: #1e1ba8;
-  border: 1px #1e1ba8 solid;
-  border-radius: 20rem;
-  color: #fff;
-  text-transform: uppercase;
+main .about .alignment .text__container .btn-border {
   padding: 0.5rem 3rem;
   margin: 2rem;
-  transition: 400ms;
-  cursor: pointer;
 }
-main .about .alignment .text__container .btn-blue:hover {
-  background-color: #ecf9fd;
+main .about .alignment .text__container .btn-border:hover {
+  background: #ecf9fd;
   border: 1px #1e1ba8 solid;
   color: #1e1ba8;
 }
@@ -265,10 +261,10 @@ footer .alignment p {
 }
 
 .btn {
-  background-color: transparent;
-  border: 1px #fff solid;
+  background: #1e1ba8;
+  background: linear-gradient(234deg, #1e1ba8 0%, #f72585 100%);
   border-radius: 20rem;
-  color: inherit;
+  color: #fff;
   text-transform: uppercase;
   padding: 0.5rem 3rem;
   transition: 400ms;
@@ -276,6 +272,6 @@ footer .alignment p {
 }
 
 .btn:hover {
-  background-color: #fff;
+  background: #fff;
   color: #000;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,102 +1,7 @@
-// Declaring variables:
-// Font-family
-$primary-font: "Kanit", sans-serif;
-$secondary-font: "Rajdhani", sans-serif;
-// Font-sizes
-$font-size-small: 0.75rem;
-$font-size-normal: 1rem;
-$font-size-medium: 2rem;
-$font-size-large: 3rem;
-$font-size-xl: 4rem;
-$font-size-xxl: 5rem;
-// Colors
-$black: #000;
-$blue: #1e1ba8;
-$pink: #f72585;
-$light-blue: #ecf9fd;
-$white: #fff;
-// line-height
-$line-height-small: 0.8;
-// border-radius
-$border-rounded: 20rem;
-$border-square: 0;
-// margin-sizes
-$margin-x: 2rem;
-$margin-y: 4rem;
-// Padding-sizes
-$padding-x: 2rem;
-$padding-y: 4rem;
-
-// Reset styles:
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin and padding */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* a tags */
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-
-/* Set core root defaults */
-html {
-  scroll-behavior: smooth;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  max-width: 100%;
-  overflow-x: hidden;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: $secondary-font;
-  color: $white;
-  font-size: $font-size-normal;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+@use "../styles/reset/reset" as *;
+@use "../styles/globals/boilerplate" as *;
+@use "../styles/globals/colors" as *;
+@use "../styles/globals/fonts" as *;
 
 // Start Styling
 header {
@@ -202,6 +107,10 @@ main {
             align-items: flex-start;
             margin-bottom: 2rem;
 
+            a {
+              color: $black;
+            }
+
             a:hover {
               text-decoration: underline;
             }
@@ -248,19 +157,12 @@ main {
           margin: 2rem;
         }
 
-        .btn-blue {
-          background-color: $blue;
-          border: 1px $blue solid;
-          border-radius: $border-rounded;
-          color: $white;
-          text-transform: uppercase;
+        .btn-border {
           padding: 0.5rem 3rem;
           margin: 2rem;
-          transition: 400ms;
-          cursor: pointer;
         }
-        .btn-blue:hover {
-          background-color: $light-blue;
+        .btn-border:hover {
+          background: $light-blue;
           border: 1px $blue solid;
           color: $blue;
         }
@@ -326,16 +228,22 @@ footer {
 }
 
 .btn {
-  background-color: transparent;
-  border: 1px $white solid;
+  background: rgb(30, 27, 168);
+  background: linear-gradient(
+    234deg,
+    rgba(30, 27, 168, 1) 0%,
+    rgba(247, 37, 133, 1) 100%
+  );
+  // background-color: transparent;
+  // border: 1px $white solid;
   border-radius: $border-rounded;
-  color: inherit;
+  color: $white;
   text-transform: uppercase;
   padding: 0.5rem 3rem;
   transition: 400ms;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: $white;
+  background: $white;
   color: $black;
 }
