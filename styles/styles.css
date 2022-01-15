@@ -124,7 +124,6 @@ main .projects {
   align-items: center;
   background-color: #ecf9fd;
   color: #000;
-  border-bottom: solid 1px #000;
 }
 main .projects .alignment {
   padding: 4rem 2rem;
@@ -135,10 +134,26 @@ main .projects .alignment {
 }
 main .projects .alignment h2 {
   margin-bottom: 2rem;
+  font-size: 2rem;
+}
+@media (min-width: 40em) {
+  main .projects .alignment h2 {
+    margin-bottom: 4rem;
+  }
 }
 main .projects .alignment .projects__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 40em) {
+  main .projects .alignment .projects__item {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
 }
 main .projects .alignment .projects__item .projects__text-box {
   display: flex;
@@ -149,6 +164,12 @@ main .projects .alignment .projects__item .projects__text-box {
 }
 main .projects .alignment .projects__item .projects__text-box h3 {
   margin-bottom: 1rem;
+}
+@media (min-width: 40em) {
+  main .projects .alignment .projects__item .projects__text-box {
+    text-align: start;
+    align-items: flex-start;
+  }
 }
 main .projects .alignment .projects__item .projects__text-box .projects__list {
   text-align: start;
@@ -168,13 +189,21 @@ main .projects .alignment .projects__item .projects__text-box .projects__links a
 }
 main .projects .alignment .projects__item .projects__image-box {
   margin-bottom: 4rem;
+  max-width: 24rem;
+}
+@media (min-width: 40em) {
+  main .projects .alignment .projects__item .projects__image-box {
+    margin-bottom: 0;
+    min-width: 24rem;
+    max-width: none;
+  }
 }
 main .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ecf9fd;
+  background-color: #fff;
   color: #000;
 }
 main .about .alignment {
@@ -183,12 +212,24 @@ main .about .alignment {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 40em) {
+  main .about .alignment {
+    flex-direction: row-reverse;
+    gap: 4rem;
+  }
+}
 main .about .alignment .image__container {
   background-image: url(/images/about_opt.png);
   background-position: center;
   background-size: cover;
-  width: 16rem;
-  height: 16rem;
+  min-width: 16rem;
+  min-height: 16rem;
+}
+@media (min-width: 40em) {
+  main .about .alignment .image__container {
+    min-width: 20rem;
+    min-height: 20rem;
+  }
 }
 main .about .alignment .text__container {
   display: flex;
@@ -197,16 +238,23 @@ main .about .alignment .text__container {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 40em) {
+  main .about .alignment .text__container {
+    max-width: 20rem;
+    text-align: start;
+    align-items: flex-start;
+  }
+}
 main .about .alignment .text__container .about__title {
-  margin: 2rem;
+  margin: 2rem 0;
+  font-size: 2rem;
 }
 main .about .alignment .text__container .btn-border {
   padding: 0.5rem 3rem;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 main .about .alignment .text__container .btn-border:hover {
   background: #ecf9fd;
-  border: 1px #1e1ba8 solid;
   color: #1e1ba8;
 }
 main .contact {
@@ -223,7 +271,8 @@ main .contact .alignment {
   align-items: center;
 }
 main .contact .alignment .contact__title {
-  margin: 1rem;
+  margin: 2rem 0;
+  font-size: 2rem;
 }
 main .contact .alignment .contact__info {
   display: flex;
@@ -265,6 +314,7 @@ footer .alignment p {
   background: linear-gradient(234deg, #1e1ba8 0%, #f72585 100%);
   border-radius: 20rem;
   color: #fff;
+  box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   padding: 0.5rem 3rem;
   transition: 400ms;
