@@ -240,7 +240,7 @@ main {
     }
   }
 }
-
+// Footer section
 footer {
   background-color: $black;
   text-align: center;
@@ -257,7 +257,7 @@ footer {
       list-style: none;
 
       .footer__social-image {
-        margin-right: 2.375rem;
+        margin-right: 2rem;
       }
 
       .footer__social-image {
@@ -269,7 +269,7 @@ footer {
     }
   }
 }
-
+// Button style
 .btn {
   background: rgb(30, 27, 168);
   background: linear-gradient(
@@ -282,10 +282,40 @@ footer {
   box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   padding: 0.5rem 3rem;
-  transition: 400ms;
+  transition: all 400ms;
   cursor: pointer;
 }
 .btn:hover {
   background: $white;
   color: $black;
+}
+
+// Back to top
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  background: linear-gradient(
+    234deg,
+    rgba(30, 27, 168, 1) 0%,
+    rgba(247, 37, 133, 1) 100%
+  );
+  border-radius: 50%;
+  z-index: 5;
+  visibility: hidden;
+  transition: all 400ms;
+
+  @include breakpoint(medium) {
+    bottom: 4rem;
+    right: 4rem;
+  }
+
+  .back-to-top__image {
+    height: 70%;
+  }
 }
